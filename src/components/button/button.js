@@ -1,18 +1,15 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './button.css';
 
-function Button({
-  color,
-  children,
-}) {
+function Button({ color, children }) {
   return (
     <button
-      role="button"
       className={cx({
-        'button': true,
-        [`button-color-${color}`]: true
+        button: true,
+        [`button-color-${color}`]: true,
       })}
     >
       {children}
@@ -21,10 +18,7 @@ function Button({
 }
 
 Button.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'tertiary',
-  ]).isRequired,
+  color: PropTypes.oneOf(['primary', 'tertiary']).isRequired,
   children: PropTypes.node,
 };
 

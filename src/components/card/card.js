@@ -1,16 +1,14 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './card.css';
 
-function Card({
-  suit,
-  value,
-}) {
+function Card({ suit, value }) {
   return (
     <div
       className={cx({
-        'card': true,
+        card: true,
         [`card-suit-${suit}`]: true,
         [`card-value-${value}`]: true,
       })}
@@ -19,12 +17,7 @@ function Card({
 }
 
 Card.propTypes = {
-  suit: PropTypes.oneOf([
-    'diamond',
-    'spade',
-    'heart',
-    'club'
-  ]).isRequired,
+  suit: PropTypes.oneOf(['diamond', 'spade', 'heart', 'club']).isRequired,
   value: PropTypes.oneOf([
     'ace',
     '2',

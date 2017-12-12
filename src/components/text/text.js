@@ -1,17 +1,14 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './text.css';
 
-function Text({
-  color,
-  size,
-  children,
-}) {
+function Text({ color, size, children }) {
   return (
     <span
       className={cx({
-        'text': true,
+        text: true,
         [`text-color-${color}`]: true,
         [`text-size-${size}`]: true,
       })}
@@ -22,16 +19,8 @@ function Text({
 }
 
 Text.propTypes = {
-  color: PropTypes.oneOf([
-    'white',
-    'dark-grey',
-  ]).isRequired,
-  size: PropTypes.oneOf([
-    'meta',
-    'standard',
-    'large',
-    'huge',
-  ]).isRequired,
+  color: PropTypes.oneOf(['white', 'dark-grey']).isRequired,
+  size: PropTypes.oneOf(['meta', 'standard', 'large', 'huge']).isRequired,
   children: PropTypes.node,
 };
 
