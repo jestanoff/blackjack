@@ -1,8 +1,5 @@
 import React from 'react';
-import Button from '../button';
-import Card from '../card';
-import Text from '../text';
-
+import { Button, Card, Text } from '../';
 import './app.css';
 
 function App() {
