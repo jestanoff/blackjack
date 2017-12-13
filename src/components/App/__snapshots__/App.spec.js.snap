@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render proper markup 1`] = `
+<div
+  className="app"
+>
+  <button
+    className="button button-color-primary"
+  >
+    Primary
+  </button>
+  <button
+    className="button button-color-tertiary"
+  >
+    Secondary button
+  </button>
+  <div
+    className="card card-suit-club card-value-jack"
+  />
+  <span
+    className="text text-color-dark-grey text-size-standard"
+  >
+    Hello world!
+  </span>
+  <span
+    className="text text-color-dark-grey text-size-huge"
+  >
+    Hello world!
+  </span>
+</div>
+`;

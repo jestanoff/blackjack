@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
+import './card.css'
 
-import './card.css';
-
-function Card({ suit, value }) {
+const Card = ({ suit, value }) => {
   return (
     <div
       className={cx({
@@ -13,26 +12,13 @@ function Card({ suit, value }) {
         [`card-value-${value}`]: true,
       })}
     />
-  );
+  )
 }
 
 Card.propTypes = {
   suit: PropTypes.oneOf(['diamond', 'spade', 'heart', 'club']).isRequired,
-  value: PropTypes.oneOf([
-    'ace',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    'jack',
-    'queen',
-    'king',
-  ]).isRequired,
-};
+  value: PropTypes.oneOf(['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'])
+    .isRequired,
+}
 
-export default Card;
+export default Card
