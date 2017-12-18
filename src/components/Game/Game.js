@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Card, Text } from '../'
+import { Button, Card, Status, Text } from '../'
 import {
   getFullDeck,
   getRandomCard,
@@ -43,14 +43,16 @@ class Game extends Component {
 
   render() {
     const { aiCards, playerCards } = this.state
+    const sumPlayer = sumCards(playerCards)
+    const sumAi = sumCards(aiCards)
 
     return (
       <section className="board">
         <section className="board--cards">
           <div className="board--ai-cards">
             <div>
-              <h2>AI cards:</h2>
-              <p>sum {sumCards(aiCards)}</p>
+              <h2>Dealer cards</h2>
+              <p>sum {sumAi}</p>
             </div>
             {aiCards.map(({ suit, value }) => (
               <Card key={`${value}-${suit}`} suit={suit} value={value} />
@@ -58,8 +60,8 @@ class Game extends Component {
           </div>
           <div className="board--player-cards">
             <div>
-              <h2>Player cards:</h2>
-              <p>sum {sumCards(playerCards)}</p>
+              <h2>Player cards</h2>
+              <p>sum {sumPlayer}</p>
             </div>
             {playerCards.map(({ suit, value }) => (
               <Card key={`${value}-${suit}`} suit={suit} value={value} />
@@ -67,7 +69,7 @@ class Game extends Component {
           </div>
         </section>
         <section className="board--controls">
-          <Text>Players turn</Text>
+          <Status sumPlayer={sumPlayer} sumAi={sumAi} />
           <hr className="board--controls-hr" />
           <Button handleClick={this.dealCard} color="tertiary">
             Hit

@@ -16,11 +16,11 @@ exports[`<Game /> should render proper markup 1`] = `
         </h2>
         <p>
           sum 
-          4
+          10
         </p>
       </div>
       <div
-        className="card card-suit-heart card-value-4"
+        className="card card-suit-heart card-value-Q"
       />
     </div>
     <div
@@ -32,14 +32,14 @@ exports[`<Game /> should render proper markup 1`] = `
         </h2>
         <p>
           sum 
-          7
+          17
         </p>
       </div>
       <div
-        className="card card-suit-club card-value-5"
+        className="card card-suit-diamond card-value-7"
       />
       <div
-        className="card card-suit-diamond card-value-2"
+        className="card card-suit-club card-value-K"
       />
     </div>
   </section>

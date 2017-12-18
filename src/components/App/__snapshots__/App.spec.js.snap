@@ -24,11 +24,11 @@ exports[`<App /> should render proper markup 1`] = `
           </h2>
           <p>
             sum 
-            10
+            11
           </p>
         </div>
         <div
-          className="card card-suit-club card-value-J"
+          className="card card-suit-diamond card-value-A"
         />
       </div>
       <div
@@ -40,14 +40,14 @@ exports[`<App /> should render proper markup 1`] = `
           </h2>
           <p>
             sum 
-            12
+            19
           </p>
         </div>
         <div
-          className="card card-suit-heart card-value-K"
+          className="card card-suit-spade card-value-9"
         />
         <div
-          className="card card-suit-club card-value-2"
+          className="card card-suit-diamond card-value-K"
         />
       </div>
     </section>
