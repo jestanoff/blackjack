@@ -26,13 +26,31 @@ class Game extends Component {
 
     return {
       deckStatus,
-      playerCards: [firstPlayerCard, secondPlayerCard],
       aiCards: [firstAiCard],
+      playerCards: [firstPlayerCard, secondPlayerCard],
+      isGameOver: false,
+      winner: null,
     }
   }
 
-  dealCard = event => {
+  dealPlayerCard = event => {
     event.preventDefault()
+    let { deckStatus, playerCards } = this.state
+    let isGameOver, winner
+    const card = getUniqueCard(deckStatus)
+    deckStatus = removeCardFromDeck(card, deckStatus)
+    playerCards = [...playerCards, card]
+    if (sumCards(playerCards) > 21) {
+      isGameOver = true
+      winner = 'Dealer'
+    }
+
+    this.setState({
+      deckStatus,
+      playerCards,
+      isGameOver,
+      winner,
+    })
   }
 
   handleResetGame = event => {
@@ -42,7 +60,7 @@ class Game extends Component {
   }
 
   render() {
-    const { aiCards, playerCards } = this.state
+    const { aiCards, isGameOver, playerCards, winner } = this.state
     const sumPlayer = sumCards(playerCards)
     const sumAi = sumCards(aiCards)
 
@@ -69,12 +87,14 @@ class Game extends Component {
           </div>
         </section>
         <section className="board--controls">
-          <Status sumPlayer={sumPlayer} sumAi={sumAi} />
+          <Status isGameOver={isGameOver} sumPlayer={sumPlayer} sumAi={sumAi} winner={winner} />
           <hr className="board--controls-hr" />
-          <Button handleClick={this.dealCard} color="tertiary">
+          <Button disabled={isGameOver} handleClick={this.dealPlayerCard} color="tertiary">
             Hit
           </Button>
-          <Button color="primary">Stick</Button>
+          <Button color="primary" disabled={isGameOver}>
+            Stick
+          </Button>
           <hr className="board--controls-hr" />
           <Button color="warning" handleClick={this.handleResetGame}>
             Reset
