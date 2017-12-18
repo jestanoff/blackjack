@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Game /> should render proper markup 1`] = `
+<section
+  className="board"
+>
+  <section
+    className="board--cards"
+  >
+    <div
+      className="board--ai-cards"
+    >
+      <div>
+        <h2>
+          AI cards:
+        </h2>
+        <p>
+          sum 
+          4
+        </p>
+      </div>
+      <div
+        className="card card-suit-heart card-value-4"
+      />
+    </div>
+    <div
+      className="board--player-cards"
+    >
+      <div>
+        <h2>
+          Player cards:
+        </h2>
+        <p>
+          sum 
+          7
+        </p>
+      </div>
+      <div
+        className="card card-suit-club card-value-5"
+      />
+      <div
+        className="card card-suit-diamond card-value-2"
+      />
+    </div>
+  </section>
+  <section
+    className="board--controls"
+  >
+    <h1
+      className="text text-color-dark-grey text-size-standard"
+    >
+      Players turn
+    </h1>
+    <hr
+      className="board--controls-hr"
+    />
+    <button
+      className="button button-color-tertiary"
+      onClick={[Function]}
+    >
+      Hit
+    </button>
+    <button
+      className="button button-color-primary"
+      onClick={undefined}
+    >
+      Stick
+    </button>
+    <hr
+      className="board--controls-hr"
+    />
+    <button
+      className="button button-color-warning"
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </section>
+</section>
+`;

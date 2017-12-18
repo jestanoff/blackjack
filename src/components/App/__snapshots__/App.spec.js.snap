@@ -4,28 +4,86 @@ exports[`<App /> should render proper markup 1`] = `
 <div
   className="app"
 >
-  <button
-    className="button button-color-primary"
+  <h1
+    className="text text-color-white text-size-huge"
   >
-    Primary
-  </button>
-  <button
-    className="button button-color-tertiary"
+    Lystable Blackjack
+  </h1>
+  <section
+    className="board"
   >
-    Secondary button
-  </button>
-  <div
-    className="card card-suit-club card-value-jack"
-  />
-  <span
-    className="text text-color-dark-grey text-size-standard"
-  >
-    Hello world!
-  </span>
-  <span
-    className="text text-color-dark-grey text-size-huge"
-  >
-    Hello world!
-  </span>
+    <section
+      className="board--cards"
+    >
+      <div
+        className="board--ai-cards"
+      >
+        <div>
+          <h2>
+            AI cards:
+          </h2>
+          <p>
+            sum 
+            10
+          </p>
+        </div>
+        <div
+          className="card card-suit-club card-value-J"
+        />
+      </div>
+      <div
+        className="board--player-cards"
+      >
+        <div>
+          <h2>
+            Player cards:
+          </h2>
+          <p>
+            sum 
+            12
+          </p>
+        </div>
+        <div
+          className="card card-suit-heart card-value-K"
+        />
+        <div
+          className="card card-suit-club card-value-2"
+        />
+      </div>
+    </section>
+    <section
+      className="board--controls"
+    >
+      <h1
+        className="text text-color-dark-grey text-size-standard"
+      >
+        Players turn
+      </h1>
+      <hr
+        className="board--controls-hr"
+      />
+      <button
+        className="button button-color-tertiary"
+        onClick={[Function]}
+      >
+        Hit
+      </button>
+      <button
+        className="button button-color-primary"
+        onClick={undefined}
+      >
+        Stick
+      </button>
+      <hr
+        className="board--controls-hr"
+      />
+      <button
+        className="button button-color-warning"
+        onClick={[Function]}
+      >
+        Reset
+      </button>
+    </section>
+  </section>
 </div>
 `;

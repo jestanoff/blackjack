@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 
-import './text.css';
+import './text.css'
 
 function Text({ color, size, children }) {
   return (
-    <span
+    <h1
       className={cx({
         text: true,
         [`text-color-${color}`]: true,
@@ -14,19 +14,19 @@ function Text({ color, size, children }) {
       })}
     >
       {children}
-    </span>
-  );
+    </h1>
+  )
 }
 
 Text.propTypes = {
   color: PropTypes.oneOf(['white', 'dark-grey']).isRequired,
   size: PropTypes.oneOf(['meta', 'standard', 'large', 'huge']).isRequired,
   children: PropTypes.node,
-};
+}
 
 Text.defaultProps = {
   color: 'dark-grey',
   size: 'standard',
-};
+}
 
-export default Text;
+export default Text
