@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import './status.css'
 
 const Status = ({ isGameOver, sumPlayer, sumAi, winner }) => (
-  <Text>{isGameOver && `winner is ${winner}`}</Text>
+  <Text>{isGameOver ? `The winner is ${winner}` : 'Press Hit or Stick buttons to play'}</Text>
 )
 
 Status.propTypes = {
