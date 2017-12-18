@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Card, Status, Text } from '../'
+import { Button, Card, Status } from '../'
 import {
   getFullDeck,
   getRandomCard,
