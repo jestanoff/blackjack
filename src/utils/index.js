@@ -32,3 +32,17 @@ export const getFullDeck = () =>
   )
 
 export const sumCards = cards => cards.reduce((accu, card) => accu + cardValues[card.value], 0)
+
+export const getWinner = (playerCards, aiCards) => {
+  const sumPlayer = sumCards(playerCards)
+  const sumAi = sumCards(aiCards)
+
+  if (sumPlayer === sumAi) {
+    return 'the game is Draw'
+  } else if (sumPlayer > sumAi && sumPlayer <= 21) {
+    return 'Player'
+  } else if (sumPlayer < sumAi && sumAi <= 21) {
+    return 'Dealer'
+  }
+  return 'Dealer'
+}

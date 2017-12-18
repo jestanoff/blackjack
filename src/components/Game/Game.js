@@ -4,6 +4,7 @@ import {
   getFullDeck,
   getRandomCard,
   getUniqueCard,
+  getWinner,
   removeCardFromDeck,
   sumCards,
 } from '../../utils'
@@ -35,8 +36,7 @@ class Game extends Component {
 
   dealAiCard = event => {
     event.preventDefault()
-    let { deckStatus, aiCards } = this.state
-    let isGameOver, winner
+    let { aiCards, deckStatus, playerCards } = this.state
     let card = getUniqueCard(deckStatus)
     deckStatus = removeCardFromDeck(card, deckStatus)
     aiCards = [...aiCards, card]
@@ -47,10 +47,8 @@ class Game extends Component {
       aiCards = [...aiCards, card]
     }
 
-    if (sumCards(aiCards) > 21) {
-      isGameOver = true
-      winner = 'Player'
-    }
+    const isGameOver = true
+    const winner = getWinner(playerCards, aiCards)
 
     this.setState({
       aiCards,
