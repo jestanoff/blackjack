@@ -19,15 +19,15 @@ There will be a follow up task building on top of what you produce here in the n
 
 #### Tips
 
-- This app was bootstrapped with [create-react-app](https://github.com/facebookincubator/create-react-app). Find the docs [here](./CRA.md)!
-  - Feel free to eject if you want!
-- We've provided a few [atom components](./src/components) for you to get going quickly with.
-- We are not expecting an overly-polished UI. The purpose of this exercise is to see how you model the various concepts of the game inside the application and how you design your code.
-- We've installed the following packages for your convenience (feel free to use at will or install more)
-  - [enzyme](http://airbnb.io/enzyme/)
-  - [immutable](http://facebook.github.io/immutable-js/)
-  - [lodash](https://lodash.com/)
-  - [recompose](https://github.com/acdlite/recompose/)
+* This app was bootstrapped with [create-react-app](https://github.com/facebookincubator/create-react-app). Find the docs [here](./CRA.md)!
+  * Feel free to eject if you want!
+* We've provided a few [atom components](./src/components) for you to get going quickly with.
+* We are not expecting an overly-polished UI. The purpose of this exercise is to see how you model the various concepts of the game inside the application and how you design your code.
+* We've installed the following packages for your convenience (feel free to use at will or install more)
+  * [enzyme](http://airbnb.io/enzyme/)
+  * [immutable](http://facebook.github.io/immutable-js/)
+  * [lodash](https://lodash.com/)
+  * [recompose](https://github.com/acdlite/recompose/)
 
 ## Once you're done
 
