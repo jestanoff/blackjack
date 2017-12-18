@@ -33,6 +33,26 @@ class Game extends Component {
     }
   }
 
+  dealAiCard = event => {
+    event.preventDefault()
+    let { deckStatus, aiCards } = this.state
+    let isGameOver, winner
+    const card = getUniqueCard(deckStatus)
+    deckStatus = removeCardFromDeck(card, deckStatus)
+    aiCards = [...aiCards, card]
+    if (sumCards(aiCards) > 21) {
+      isGameOver = true
+      winner = 'Player'
+    }
+
+    this.setState({
+      aiCards,
+      deckStatus,
+      isGameOver,
+      winner,
+    })
+  }
+
   dealPlayerCard = event => {
     event.preventDefault()
     let { deckStatus, playerCards } = this.state
@@ -92,7 +112,7 @@ class Game extends Component {
           <Button disabled={isGameOver} handleClick={this.dealPlayerCard} color="tertiary">
             Hit
           </Button>
-          <Button color="primary" disabled={isGameOver}>
+          <Button color="primary" disabled={isGameOver} handleClick={this.dealAiCard}>
             Stick
           </Button>
           <hr className="board--controls-hr" />
