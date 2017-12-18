@@ -37,9 +37,16 @@ class Game extends Component {
     event.preventDefault()
     let { deckStatus, aiCards } = this.state
     let isGameOver, winner
-    const card = getUniqueCard(deckStatus)
+    let card = getUniqueCard(deckStatus)
     deckStatus = removeCardFromDeck(card, deckStatus)
     aiCards = [...aiCards, card]
+
+    while (sumCards(aiCards) < 20) {
+      card = getUniqueCard(deckStatus)
+      deckStatus = removeCardFromDeck(card, deckStatus)
+      aiCards = [...aiCards, card]
+    }
+
     if (sumCards(aiCards) > 21) {
       isGameOver = true
       winner = 'Player'
