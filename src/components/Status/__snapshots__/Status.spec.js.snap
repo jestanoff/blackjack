@@ -4,6 +4,6 @@ exports[`<Status /> should render proper markup 1`] = `
 <h1
   className="text text-color-dark-grey text-size-standard"
 >
-  Dealer Wins
+  The winner is Player
 </h1>
 `;

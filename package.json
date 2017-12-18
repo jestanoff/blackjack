@@ -1,11 +1,10 @@
 {
   "name": "blackjack",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "Stefan Dzhestanov",
   "dependencies": {
     "classnames": "^2.2.5",
-    "immutable": "^3.8.1",
-    "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
@@ -16,7 +15,6 @@
     "babel-preset-flow": "^6.23.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "flow-bin": "^0.61.0",
     "react-scripts": "^1.0.17"
   },
   "scripts": {
@@ -24,8 +22,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTest.js"
   }
 }
